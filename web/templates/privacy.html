@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Hayato On Fire</title>
+  <meta name="description" content="Privacy Policy for Hayato On Fire Discord Bot. Details on data collection, storage, audit logs, and user rights.">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <div class="brand-icon">🔥</div>
+        <div class="brand-name">Hayato <span>On Fire</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#features" class="nav-link">Features</a></li>
+        <li><a href="/#commands" class="nav-link">Commands</a></li>
+        <li><a href="/terms" class="nav-link">Terms of Service</a></li>
+        <li><a href="/privacy" class="nav-link active">Privacy Policy</a></li>
+      </ul>
+      <a href="https://discord.com/oauth2/authorize?client_id=1564365119922634863&scope=bot%20applications.commands&permissions=268435456" target="_blank" class="btn btn-primary">
+        Invite Bot
+      </a>
+    </div>
+  </nav>
+
+  <!-- Legal Content -->
+  <main class="legal-page">
+    <div class="container">
+      <div class="legal-header">
+        <h1>Privacy Policy</h1>
+        <p class="legal-meta">Effective Date: October 27, 2026 | Last Updated: October 27, 2026</p>
+      </div>
+
+      <div class="legal-box legal-content">
+        <section>
+          <h2>1. Introduction</h2>
+          <p>
+            Your privacy is of paramount importance to us. This Privacy Policy explains how <strong>Hayato On Fire</strong> ("the Bot", "we", "our") collects, uses, stores, and protects information when you install and interact with our application on Discord.
+          </p>
+          <p>
+            By adding the Bot to your Discord guild or using its commands, you acknowledge and agree to the practices described in this policy, as well as the <a href="https://discord.com/privacy" target="_blank" rel="noopener" style="color: var(--accent-orange);">Discord Privacy Policy</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2>2. Information We Collect</h2>
+          <p>We only collect the minimal technical data strictly necessary to provide role management, dynamic direct messaging, and audit logging features:</p>
+          <ul>
+            <li><strong>Discord Identifiers (Snowflakes):</strong> Guild IDs, User IDs, and Role IDs involved in slash commands or role assignments.</li>
+            <li><strong>Display Names:</strong> The usernames or server nicknames of command executors and target members at the time an action is executed (solely recorded in audit logs).</li>
+            <li><strong>Server Configurations:</strong> Custom DM templates configured by server administrators via <code>/dm-config set</code> and role-specific descriptions configured via <code>/dm-config description</code>.</li>
+            <li><strong>Audit Logs & Delivery Metadata:</strong> Timestamps of role assignments or removals, action types (e.g. <code>ROLE_ASSIGN</code>, <code>ROLE_REMOVE</code>), and direct message delivery outcomes (e.g. <code>SENT</code>, <code>FAILED</code>).</li>
+          </ul>
+
+          <div class="legal-highlight">
+            <p><strong>What We DO NOT Collect:</strong> We do NOT monitor, read, or store server chat messages, message history, voice chat audio, email addresses, IP addresses, payment credentials, or personal identification details.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>3. How We Use Collected Data</h2>
+          <p>The collected data is exclusively used to:</p>
+          <ul>
+            <li>Dynamically assign and remove roles requested by authorized server moderators.</li>
+            <li>Render personalized direct messages using the server's configured template (e.g. replacing <code>{user}</code> with the recipient's mention and <code>{role}</code> with the role name).</li>
+            <li>Provide server administrators with transparency through <code>/audit recent</code> and <code>/audit user</code> command queries.</li>
+            <li>Diagnose operational issues and verify that DMs were successfully delivered.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. Data Storage and Security</h2>
+          <p>
+            All operational data is persisted in a secured relational database (SQLite / PostgreSQL) utilizing parameterized queries via SQLAlchemy 2.x to prevent injection vulnerabilities.
+          </p>
+          <ul>
+            <li><strong>Guild Data Isolation:</strong> Every database entry is keyed and partitioned by <code>guild_id</code>. Data from one server is never shared, exposed, or accessible by another server.</li>
+            <li><strong>Access Control:</strong> Database access is restricted to the bot process only. No unauthorized public or third-party access is permitted.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5. Third-Party Sharing</h2>
+          <p>
+            <strong>We do not sell, rent, monetize, or trade any user or server data to third parties, advertisers, or data brokers.</strong> Data is only transmitted to the Discord API as necessary to execute requested actions (such as adding roles or dispatching DMs).
+          </p>
+        </section>
+
+        <section>
+          <h2>6. Data Retention and Deletion (User Rights)</h2>
+          <p>
+            We adhere to data minimization principles:
+          </p>
+          <ul>
+            <li><strong>Server Configurations:</strong> Persist until updated or reset by an administrator via <code>/config reset</code> or until the Bot is removed from the server.</li>
+            <li><strong>Audit Logs:</strong> Maintained for operational logging and server moderation history. Older records are capped and pruned systematically.</li>
+            <li><strong>Data Deletion Requests (GDPR / CCPA):</strong> If you are a server owner and wish to have all stored records for your guild deleted from our database, or if you are an individual user requesting the removal of your identifier from our logs, you may submit a deletion request to the contact provided below. All associated records will be purged within 30 days.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>7. Changes to This Privacy Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time to reflect operational or legal enhancements. Changes will be posted to this page with an updated "Last Updated" timestamp.
+          </p>
+        </section>
+
+        <section>
+          <h2>8. Contact & Privacy Inquiries</h2>
+          <p>
+            For privacy inquiries, questions regarding data handling, or to request data deletion, please contact us via:
+          </p>
+          <ul>
+            <li>Bot Application: <strong>Hayato On Fire</strong></li>
+            <li>Developer Inquiries: Contact the Bot Developer through the official application contact on Discord.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        &copy; <span id="current-year">2026</span> <strong>Hayato On Fire</strong>. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="/terms">Terms of Service</a>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/">Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hayato On Fire — Advanced Discord Role Management Bot</title>
+  <meta name="description" content="Hayato On Fire is an advanced, high-performance Discord role management bot with dynamic DM templates, role descriptions, and comprehensive audit logging.">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">🔥</div>
+        <div class="brand-name">Hayato <span>On Fire</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#features" class="nav-link">Features</a></li>
+        <li><a href="index.html#commands" class="nav-link">Commands</a></li>
+        <li><a href="terms.html" class="nav-link">Terms of Service</a></li>
+        <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+      </ul>
+      <a href="https://discord.com/oauth2/authorize?client_id=1564365119922634863&scope=bot%20applications.commands&permissions=268435456" target="_blank" class="btn btn-primary">
+        Invite Bot
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Ready for Discord Verification
+      </div>
+      <h1 class="hero-title">
+        Next-Generation <br>
+        <span class="gradient-text">Role Management & Automation</span>
+      </h1>
+      <p class="hero-subtitle">
+        Empower your Discord community with dynamic role assignments, custom templated direct messages, role hierarchy enforcement, and complete audit trails.
+      </p>
+      <div class="hero-cta">
+        <a href="https://discord.com/oauth2/authorize?client_id=1564365119922634863&scope=bot%20applications.commands&permissions=268435456" target="_blank" class="btn btn-primary">
+          Add to Discord
+        </a>
+        <a href="index.html#commands" class="btn btn-secondary">
+          Explore Commands
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features Grid -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Engineered for Scale & Security</h2>
+        <p class="section-desc">Everything you need to deliver an exceptional role assignment experience for your members.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3 class="card-title">Dynamic Role Delivery</h3>
+          <p class="card-text">Assign any guild role dynamically by Role ID at runtime. No hardcoding or static server configurations required.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">✉️</div>
+          <h3 class="card-title">Personalized DM Engine</h3>
+          <p class="card-text">Automatically send members customized direct messages with dynamic placeholders like <code>{user}</code>, <code>{role}</code>, and <code>{role_description}</code>.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🛡️</div>
+          <h3 class="card-title">Hierarchy Protection</h3>
+          <p class="card-text">Strict hierarchy and authorization rules prevent accidental elevation, protected role modifications, or unauthorized role assignments.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3 class="card-title">Live Audit Trails</h3>
+          <p class="card-text">Complete visibility with audit logs tracking every role change, executor, recipient, timestamp, and DM delivery result.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔒</div>
+          <h3 class="card-title">Mass-Mention Immune</h3>
+          <p class="card-text">Automatic mention neutralization prevents rogue variables or custom descriptions from triggering unwanted <code>@everyone</code> or <code>@here</code> pings.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌐</div>
+          <h3 class="card-title">Multi-Server Isolated</h3>
+          <p class="card-text">Zero data leakage. Every guild has independent DM templates, role descriptions, and audit records with SQLAlchemy 2.x async architecture.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commands Section -->
+  <section class="features" id="commands">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Slash Commands</h2>
+        <p class="section-desc">Intuitive, modern Discord Application Commands at your fingertips.</p>
+      </div>
+
+      <div class="command-table-wrap">
+        <table class="command-table">
+          <thead>
+            <tr>
+              <th>Command</th>
+              <th>Parameters</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="cmd-badge">/role give</span></td>
+              <td><code>member</code>, <code>role_id</code></td>
+              <td>Assigns a role by snowflake ID, dispatches a personalized DM, and logs the action.</td>
+            </tr>
+            <tr>
+              <td><span class="cmd-badge">/role remove</span></td>
+              <td><code>member</code>, <code>role_id</code></td>
+              <td>Removes a role from a member and records an audit log.</td>
+            </tr>
+            <tr>
+              <td><span class="cmd-badge">/role info</span></td>
+              <td><code>role_id</code></td>
+              <td>Displays role position, members count, permissions, and configured DM description.</td>
+            </tr>
+            <tr>
+              <td><span class="cmd-badge">/dm-config set</span></td>
+              <td><code>template</code></td>
+              <td>Sets the server's reusable DM message template.</td>
+            </tr>
+            <tr>
+              <td><span class="cmd-badge">/dm-config preview</span></td>
+              <td><code>role_id</code></td>
+              <td>Previews how a DM template renders for a role without sending messages.</td>
+            </tr>
+            <tr>
+              <td><span class="cmd-badge">/dm-config description</span></td>
+              <td><code>role_id</code>, <code>[description]</code></td>
+              <td>Sets or clears a role-specific description for the <code>{role_description}</code> variable.</td>
+            </tr>
+            <tr>
+              <td><span class="cmd-badge">/dm-config variables</span></td>
+              <td>—</td>
+              <td>Lists all supported template variables and usage examples.</td>
+            </tr>
+            <tr>
+              <td><span class="cmd-badge">/config view</span></td>
+              <td>—</td>
+              <td>Displays current server template and configured descriptions.</td>
+            </tr>
+            <tr>
+              <td><span class="cmd-badge">/config reset</span></td>
+              <td>—</td>
+              <td>Restores factory default DM template via interactive confirmation buttons.</td>
+            </tr>
+            <tr>
+              <td><span class="cmd-badge">/audit recent</span></td>
+              <td><code>[limit]</code></td>
+              <td>Displays recent role actions, actors, and DM delivery outcomes.</td>
+            </tr>
+            <tr>
+              <td><span class="cmd-badge">/audit user</span></td>
+              <td><code>member</code>, <code>[limit]</code></td>
+              <td>Displays audit history affecting a specific user.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        &copy; <span id="current-year">2026</span> <strong>Hayato On Fire</strong>. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://discord.com" target="_blank" rel="noopener">Discord</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="static/js/main.js"></script>
+</body>
+</html>
